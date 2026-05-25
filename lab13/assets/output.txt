@@ -1,0 +1,4 @@
+Minimum: 2
+Maximum: 20
+Average: 9.57
+Even numbers: 4
