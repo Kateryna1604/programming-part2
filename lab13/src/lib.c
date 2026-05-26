@@ -1,59 +1,69 @@
 #include "lib.h"
+
 #include <stdio.h>
 
-
-void process_file(const char *input_path, const char *output_path)
+void read_matrix(
+    const char *filename,
+    int matrix[MAX_ROWS][MAX_COLS],
+    int *rows,
+    int *cols)
 {
-    FILE *input = fopen(input_path, "r");
+    FILE *file = fopen(filename, "r");
 
-    if (input == NULL) {
+    if (file == NULL) {
         return;
     }
 
-    int number = 0;
-    int min = 0;
-    int max = 0;
-    int sum = 0;
-    int count = 0;
-    int even_count = 0;
+    fscanf(file, "%d %d", rows, cols);
 
-    fscanf(input, "%d", &number);
+    for (int i = 0; i < *rows; i++) {
+        for (int j = 0; j < *cols; j++) {
 
-    min = number;
-    max = number;
-
-    do {
-        if (number < min) {
-            min = number;
+            fscanf(
+                file,
+                "%d",
+                (*(matrix + i) + j));
         }
+    }
 
-        if (number > max) {
-            max = number;
+    fclose(file);
+}
+
+int find_max(
+    int matrix[MAX_ROWS][MAX_COLS],
+    int rows,
+    int cols)
+{
+    int max = *(*(matrix));
+
+    for (int i = 0; i < rows; i++) {
+
+        for (int j = 0; j < cols; j++) {
+
+            if (*(*(matrix + i) + j) > max) {
+
+                max = *(*(matrix + i) + j);
+            }
         }
+    }
 
-        if (number % 2 == 0) {
-            even_count++;
-        }
+    return max;
+}
 
-        sum += number;
-        count++;
+void write_result(
+    const char *filename,
+    int max)
+{
+    FILE *file = fopen(filename, "w");
 
-    } while (fscanf(input, "%d", &number) == 1);
-
-    fclose(input);
-
-    float average = (float)sum / count;
-
-    FILE *output = fopen(output_path, "w");
-
-    if (output == NULL) {
+    if (file == NULL) {
         return;
     }
 
-    fprintf(output, "Minimum: %d\n", min);
-    fprintf(output, "Maximum: %d\n", max);
-    fprintf(output, "Average: %.2f\n", average);
-    fprintf(output, "Even numbers: %d\n", even_count);
+    fprintf(
+        file,
+        "Maximum element: %d\n",
+        max);
 
-    fclose(output);
+    fclose(file);
 }
