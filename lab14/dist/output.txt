@@ -1,0 +1,47 @@
+TOTAL SIZE: 115
+
+ALL MAILS:
+Subject: Another Mail
+From: Ivan Ivanov <ivan@mail.com>
+To: Anna Smith <anna@mail.com>
+Body: Simple text 789
+Type: normal
+
+Subject: Hello World
+From: Ivan Ivanov <ivan@mail.com>
+To: Petro Petrov <petro@mail.com>
+Body: First message text
+Type: normal
+
+Subject: Report
+From: Oleh Bondar <oleh@mail.com>
+To: Admin User <admin@mail.com>
+Body: Project completed 2025
+Type: compressed
+
+Subject: Secret Plan
+From: Anna Smith <anna@mail.com>
+To: John Doe <john@mail.com>
+Body: 123 hidden 456 data!
+Type: secret
+
+BY USER:
+Subject: Another Mail
+From: Ivan Ivanov <ivan@mail.com>
+To: Anna Smith <anna@mail.com>
+Body: Simple text 789
+Type: normal
+
+Subject: Hello World
+From: Ivan Ivanov <ivan@mail.com>
+To: Petro Petrov <petro@mail.com>
+Body: First message text
+Type: normal
+
+SECRET MAILS:
+Subject: Secret Plan
+From: Anna Smith <anna@mail.com>
+To: John Doe <john@mail.com>
+Body: 123 hidden 456 data!
+Type: secret
+
