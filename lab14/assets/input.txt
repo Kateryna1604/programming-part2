@@ -1,4 +1,0 @@
-0|Hello World|First message text|Ivan Ivanov|ivan@mail.com|Petro Petrov|petro@mail.com|UTF8|normal|0
-1|Secret Plan|123 hidden 456 data!|Anna Smith|anna@mail.com|John Doe|john@mail.com|UTF8|secret|0
-0|Report|Project completed 2025|Oleh Bondar|oleh@mail.com|Admin User|admin@mail.com|CP1251|compressed|0.6
-0|Another Mail|Simple text 789|Ivan Ivanov|ivan@mail.com|Anna Smith|anna@mail.com|UTF8|normal|0
