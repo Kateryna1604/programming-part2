@@ -7,7 +7,9 @@ void read_matrix(
     int matrix[MAX_ROWS][MAX_COLS],
     int *rows,
     int *cols)
+    
 {
+
     FILE *file = fopen(filename, "r");
 
     if (file == NULL) {
@@ -48,7 +50,22 @@ int find_max(
     }
 
     return max;
-}
+} 
+int find_sum(
+    int matrix [MAX_ROWS][MAX_COLS],
+    int rows,
+    int cols)
+ {
+    int sum = 0;
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            sum += *(*(matrix + i) + j);
+        }
+    }
+    printf("Sum element: %d\n", sum);
+ 
+    return sum;
+ }
 
 void write_result(
     const char *filename,

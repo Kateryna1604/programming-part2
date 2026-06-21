@@ -22,9 +22,14 @@ int main()
         rows,
         cols);
 
+        int sum = find_sum(
+            matrix,
+            rows,
+            cols);
+
     write_result(
         "assets/output.txt",
         max);
 
-    return 0;
+    return sum;
 }
